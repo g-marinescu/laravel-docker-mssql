@@ -1,5 +1,5 @@
 services:
-  # PHP-FPM cu suport MSSQL
+  # PHP-FPM with MSSQL support
   php:
     build:
       context: ./docker/php
@@ -28,7 +28,7 @@ services:
     depends_on:
       - php
 
-  # SQL Server (pentru development local)
+  # SQL Server (for local development)
   mssql:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: laravel_mssql
